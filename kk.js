@@ -1,4 +1,4 @@
 function greet(){
-    return "Hola pepe";
+    return "Hola juan";
 }
 console.log(greet());
