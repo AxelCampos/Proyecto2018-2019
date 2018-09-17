@@ -1,0 +1,169 @@
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git init
+Initialized empty Git repository in /home/axel/Proyectos/kk/.git/
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git remote add origin https://github.com/AxelCampos/Proyecto2018-2019.git
+axel@usuario-H110M-S2H ~/Proyectos/kk $ ls -a
+.  ..  .git  kk.js
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git status
+En la rama master
+
+Commit inicial
+
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	kk.js
+
+no se ha agregado nada al commit pero existen archivos sin seguimiento (use «git add» para darle seguimiento)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git add kk.js
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git status
+En la rama master
+
+Commit inicial
+
+Cambios para hacer commit:
+  (use «git rm --cached <archivo>...» para sacar del stage)
+
+	nuevo archivo: kk.js
+
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git commit -m "This is the first commit" 
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <axel@usuario-H110M-S2H.(none)>) not allowed
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git status
+En la rama master
+
+Commit inicial
+
+Cambios para hacer commit:
+  (use «git rm --cached <archivo>...» para sacar del stage)
+
+	nuevo archivo: kk.js
+
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git config --global user.email "axelcamposbonnet@gmail.com"
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git config --global user.name "Axel Campos"
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git commit -m "This is my first commit"
+[master (root-commit) 15b569d] This is my first commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 kk.js
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git status
+En la rama master
+nothing to commit, working directory clean
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git log
+commit 15b569db54a6acf96cd49bd3eedf41246e38cc36
+Author: Axel Campos <axelcamposbonnet@gmail.com>
+Date:   Mon Sep 17 11:45:20 2018 +0200
+
+    This is my first commit
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git push origin master
+Username for 'https://github.com': axelcamposbonnet@gmail.com
+Password for 'https://axelcamposbonnet@gmail.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/AxelCampos/Proyecto2018-2019/pull/new/master
+remote: 
+To https://github.com/AxelCampos/Proyecto2018-2019.git
+ * [new branch]      master -> master
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+De https://github.com/AxelCampos/Proyecto2018-2019
+ * branch            master     -> FETCH_HEAD
+   15b569d..66ac89a  master     -> origin/master
+Updating 15b569d..66ac89a
+Fast-forward
+ kk.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+De https://github.com/AxelCampos/Proyecto2018-2019
+ * branch            master     -> FETCH_HEAD
+   66ac89a..7b8501b  master     -> origin/master
+Updating 66ac89a..7b8501b
+Fast-forward
+ kk.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ cd ../
+axel@usuario-H110M-S2H ~/Proyectos $ cd kk
+axel@usuario-H110M-S2H ~/Proyectos/kk $ ls .s
+ls: no se puede acceder a '.s': No existe el archivo o el directorio
+axel@usuario-H110M-S2H ~/Proyectos/kk $ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/axel/.ssh/id_rsa): 
+Created directory '/home/axel/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/axel/.ssh/id_rsa.
+Your public key has been saved in /home/axel/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:X5RheNn0mmHHxZMai8cUl6cZkUZE2NskniEG0v/zWqU axel@usuario-H110M-S2H
+The key's randomart image is:
++---[RSA 2048]----+
+|        ...oo@B=+|
+|         .o.*=X*=|
+|           +*+*@*|
+|           o.**=.|
+|        S   o.o .|
+|         . .  o..|
+|          .   Eo.|
+|               ..|
+|              .. |
++----[SHA256]-----+
+axel@usuario-H110M-S2H ~/Proyectos/kk $ ls ~/.ssh/
+id_rsa  id_rsa.pub
+axel@usuario-H110M-S2H ~/Proyectos/kk $ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBZlA1qHSKkJXabs6YZi2VlGonX+0Gm9ttjZ4lOs7c2azHhBNmCqHDVqezmn2BT9hbSuhj3MiE8PJ73u7HNIc+EuBEY1heoZhtc1r9AF3dklfbFVyfHfjraq+4ENgWIIbL4/f0XPV6UL4hiNKtR2dhbGPg/zy2Hi9VHpO2guAL2LR68Wp5v9s6HLu21zy1BQ6g8z18exvn0GvdSmwRv1ynzwn0kSXHRm2kFrD1nq0FfkFvzal6sXr0doQHER3Xtr3Z8h7+St78BdxvllSyOCPI3vviHf4KmzIYQPsG8guJTWhKUp1bRYErkiT1fAVwn4BRys/QFhPfvSPpW6g34vLD axel@usuario-H110M-S2H
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git remote add origin-ssh git@github.com:AxelCampos/Proyecto2018-2019.git
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git remote -v
+origin	https://github.com/AxelCampos/Proyecto2018-2019.git (fetch)
+origin	https://github.com/AxelCampos/Proyecto2018-2019.git (push)
+origin-ssh	git@github.com:AxelCampos/Proyecto2018-2019.git (fetch)
+origin-ssh	git@github.com:AxelCampos/Proyecto2018-2019.git (push)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git add .
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git commit -m "Second commit"
+En la rama master
+nothing to commit, working directory clean
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git status
+En la rama master
+Cambios no preparados para el commit:
+  (use «git add <archivo>...» para actualizar lo que se confirmará)
+  (use «git checkout -- <archivo>...» para descartar cambios en el directorio de trabajo)
+
+	modificado:    kk.js
+
+no hay cambios agregados al commit (use «git add» o «git commit -a»)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git add .
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git commit -m "Second commit"
+[master 8ebb3b5] Second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+axel@usuario-H110M-S2H ~/Proyectos/kk $ git push origin-ssh master
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': y
+Please type 'yes' or 'no': yes 
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:AxelCampos/Proyecto2018-2019.git
+   7b8501b..8ebb3b5  master -> master
